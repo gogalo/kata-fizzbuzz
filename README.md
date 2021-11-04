@@ -10,14 +10,12 @@ Así que nuestro objetivo será escribir un programa que imprima los números de
 
 ###  TESTS
 
-- El primer número es el 1, "firs_number_is_one"
-- El tercer número es fizz, "third_number_is_fizz"
-- El quinto numero es buzz, "fith_number_is_fizz"
-- El número 15 es fizz buzz, "fifteen_number_is_fizzbuzz"
-- El metodo getData devuelve 100 numeros, "getData_must_return_100_numbers"
-- Todos los numeros divisibles por 3 son fizz, "every_third_number_then_is_fizz"
-- Todos los numeros divisibles por 5 son buzz, "every_five_numbers_is_buzz"
-- Todos los numeros divisibles por 15 son fizzbuzz, "every_fifteen_numbers_is_fizzbuzz"
+- Devolver un array de 100 elementos
+- Devolver un array del 1 al 100
+- Números divisibles por 3 devuelve Fizz
+- Números divisibles por 5 devuelve Buzz
+- Números divisibles por 3 y 5 devuelve FizzBuzz
+
 
 ###  RUN
 
