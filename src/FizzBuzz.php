@@ -6,12 +6,9 @@ namespace App;
 
 class FizzBuzz
 {
-    protected array $data;
-
     public function generate()
     {
-        $this->data = array_map([$this, 'transform'],range(1, 100));
-        return $this->data;
+        return array_map([$this, 'transform'],range(1, 100));
     }
 
     /**
