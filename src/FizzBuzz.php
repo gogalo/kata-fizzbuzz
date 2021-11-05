@@ -11,8 +11,7 @@ class FizzBuzz
         $data = [];
 
         for( $i=1; $i<=100; $i++) {
-
-            if ($this->isFizz($i) && $this->isBuzz($i)) {
+            if ($this->isFizzBuzz($i)) {
                 $data[] = "FizzBuzz";
             } else if ($this->isFizz($i)) {
                 $data[] = "Fizz";
@@ -21,7 +20,6 @@ class FizzBuzz
             } else {
                 $data[] = "$i";
             }
-
         }
 
         return $data;
@@ -43,5 +41,14 @@ class FizzBuzz
     private function isBuzz(int $number): bool
     {
         return $number % 5 == 0;
+    }
+
+    /**
+     * @param int $i
+     * @return bool
+     */
+    private function isFizzBuzz(int $i): bool
+    {
+        return $this->isFizz($i) && $this->isBuzz($i);
     }
 }
