@@ -22,6 +22,8 @@ class FizzBuzz
 
             if ($i % 3 == 0) {
                 $data[] = "Fizz";
+            } else if ($i % 5 == 0) {
+                $data[] = "Buzz";
             } else {
                 $data[] = "$i";
             }

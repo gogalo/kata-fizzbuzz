@@ -45,6 +45,16 @@ class FizzBuzzShould extends TestCase
     }
 
     /**
+     * @test
+     */
+    public function return_buzz_if_divisible_by_5()
+    {
+        $this->assertThat($this->getFizzBuzzValue(5), $this->equalTo("Buzz"));
+        $this->assertThat($this->getFizzBuzzValue(10), $this->equalTo("Buzz"));
+        $this->assertThat($this->getFizzBuzzValue(55), $this->equalTo("Buzz"));
+    }
+
+    /**
      * @param int $i
      * @return mixed
      */
