@@ -11,15 +11,7 @@ class FizzBuzz
         $data = [];
 
         foreach( range(1,100) as $number) {
-            if ($this->isFizzBuzz($number)) {
-                $data[] = "FizzBuzz";
-            } else if ($this->isFizz($number)) {
-                $data[] = "Fizz";
-            } else if ($this->isBuzz($number)) {
-                $data[] = "Buzz";
-            } else {
-                $data[] = "$number";
-            }
+            $data[] = $this->transform($number);
         }
 
         return $data;
@@ -50,5 +42,26 @@ class FizzBuzz
     private function isFizzBuzz(int $i): bool
     {
         return $this->isFizz($i) && $this->isBuzz($i);
+    }
+
+    /**
+     * @param $number
+     * @return string
+     */
+    private function transform($number): string
+    {
+        if ($this->isFizzBuzz($number)) {
+            return "FizzBuzz";
+        }
+
+        if ($this->isFizz($number)) {
+            return "Fizz";
+        }
+
+        if ($this->isBuzz($number)) {
+            return "Buzz";
+        }
+
+        return (string) $number;
     }
 }
