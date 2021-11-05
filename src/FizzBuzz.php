@@ -6,23 +6,15 @@ namespace App;
 
 class FizzBuzz
 {
-
-    /**
-     * FizzBuzz constructor.
-     */
-    public function __construct()
-    {
-    }
-
     public function generate()
     {
         $data = [];
 
         for( $i=1; $i<=100; $i++) {
 
-            if ($i % 3 == 0) {
+            if ($this->isFizz($i)) {
                 $data[] = "Fizz";
-            } else if ($i % 5 == 0) {
+            } else if ($this->isBuzz($i)) {
                 $data[] = "Buzz";
             } else {
                 $data[] = "$i";
@@ -31,5 +23,23 @@ class FizzBuzz
         }
 
         return $data;
+    }
+
+    /**
+     * @param int $number
+     * @return bool
+     */
+    private function isFizz(int $number): bool
+    {
+        return $number % 3 == 0;
+    }
+
+    /**
+     * @param int $number
+     * @return bool
+     */
+    private function isBuzz(int $number): bool
+    {
+        return $number % 5 == 0;
     }
 }
