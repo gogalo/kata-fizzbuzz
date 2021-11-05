@@ -6,15 +6,12 @@ namespace App;
 
 class FizzBuzz
 {
+    protected array $data;
+
     public function generate()
     {
-        $data = [];
-
-        foreach( range(1,100) as $number) {
-            $data[] = $this->transform($number);
-        }
-
-        return $data;
+        $this->data = array_map([$this, 'transform'],range(1, 100));
+        return $this->data;
     }
 
     /**
