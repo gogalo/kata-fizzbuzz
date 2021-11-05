@@ -8,7 +8,7 @@ class FizzBuzz
 {
     public function generate()
     {
-        return array_map([$this, 'transform'],range(1, 100));
+        return array_map([$this, 'transform'], range(1, 100));
     }
 
     /**
