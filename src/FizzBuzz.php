@@ -17,9 +17,17 @@ class FizzBuzz
     public function generate()
     {
         $data = [];
+
         for( $i=1; $i<=100; $i++) {
-            $data[] = "$i";
+
+            if ($i % 3 == 0) {
+                $data[] = "Fizz";
+            } else {
+                $data[] = "$i";
+            }
+
         }
+
         return $data;
     }
 }
