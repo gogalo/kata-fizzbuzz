@@ -18,7 +18,7 @@ class FizzBuzz
     {
         $data = [];
         for( $i=1; $i<=100; $i++) {
-            $data[] = "";
+            $data[] = "$i";
         }
         return $data;
     }
