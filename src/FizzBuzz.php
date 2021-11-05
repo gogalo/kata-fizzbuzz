@@ -12,7 +12,9 @@ class FizzBuzz
 
         for( $i=1; $i<=100; $i++) {
 
-            if ($this->isFizz($i)) {
+            if ($this->isFizz($i) && $this->isBuzz($i)) {
+                $data[] = "FizzBuzz";
+            } else if ($this->isFizz($i)) {
                 $data[] = "Fizz";
             } else if ($this->isBuzz($i)) {
                 $data[] = "Buzz";
