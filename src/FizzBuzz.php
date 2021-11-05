@@ -10,15 +10,15 @@ class FizzBuzz
     {
         $data = [];
 
-        for( $i=1; $i<=100; $i++) {
-            if ($this->isFizzBuzz($i)) {
+        foreach( range(1,100) as $number) {
+            if ($this->isFizzBuzz($number)) {
                 $data[] = "FizzBuzz";
-            } else if ($this->isFizz($i)) {
+            } else if ($this->isFizz($number)) {
                 $data[] = "Fizz";
-            } else if ($this->isBuzz($i)) {
+            } else if ($this->isBuzz($number)) {
                 $data[] = "Buzz";
             } else {
-                $data[] = "$i";
+                $data[] = "$number";
             }
         }
 
